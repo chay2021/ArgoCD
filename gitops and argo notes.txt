@@ -1,0 +1,78 @@
+👋 Introduction
+
+Goal: Build a deeper understanding of GitOps step by step across multiple videos.
+
+🎯 Objectives of the Video
+In this first video, he aims to explain:
+
+What is GitOps?
+
+Why GitOps?
+
+What was done before GitOps existed?
+
+How GitOps relates to Kubernetes.
+
+🧠 Key Points from the Video
+✅ What is GitOps?
+"GitOps uses Git as a single source of truth to deliver applications and infrastructure."
+
+This is the standard textbook definition.
+
+He plans to break this down in detail (in future parts).
+
+❓ Why GitOps?
+Before GitOps existed, when making changes (e.g., in Kubernetes), it worked like this:
+
+You manually apply changes using kubectl.
+
+Example: Updating node configurations like:
+
+Adding a taint
+
+Changing resources (CPU/memory)
+
+Problems with this approach:
+No Versioning
+
+You can’t track what was changed and when.
+
+No Audit Trail
+
+You don’t know who made the change.
+
+No Rollback Mechanism
+
+Hard to revert changes if something goes wrong.
+
+Infrastructure Drift
+
+The cluster’s current state can easily diverge from what it should be.
+
+🔁 GitOps Solves These Problems
+With GitOps:
+
+All changes (infra + app) are declared in Git.
+
+Git acts as the source of truth.
+
+Any changes to the cluster must go through Git.
+
+Tools like Argo CD (or Flux CD) monitor Git and apply changes automatically.
+
+Benefits:
+
+✅ Version control
+
+✅ Audit logs
+
+✅ Rollbacks (via git revert)
+
+✅ Declarative & reproducible infrastructure
+
+🌐 GitOps and Kubernetes
+GitOps is not limited to application deployment.
+
+It can also manage infrastructure on Kubernetes.
+
+Example: Node-level configurations, taints, resources, etc.
