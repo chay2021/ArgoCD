@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: logstash-pipeline
+data:
+  pipeline.conf: |
+    input { stdin { } }
+    output { stdout { codec => rubydebug } }
